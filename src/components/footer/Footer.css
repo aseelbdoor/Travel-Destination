@@ -1,0 +1,77 @@
+footer {
+    grid-area: footer;
+    width: 100%;
+    padding: 1.5% 3% 1.5% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(40deg,#9cab94c2,#62a83cc2,#de8bdac2);
+    bottom: 0px;
+    gap: 35px 8%;
+    flex-wrap: wrap;
+}
+footer ul {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+footer ul li a,
+footer ul li {
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    align-items: flex-end;
+    font-size: 17px;
+    color: #002644;
+}
+
+footer ul li a i {
+    font-size: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 10px 20px;
+}
+
+footer form h2 {
+    color: #002644;
+    font-weight: 900;
+    text-align: center;
+    font-size: larger;
+    font-family: 'PT Serif', serif;
+}
+
+footer form input {
+    border: none;
+    padding: 3% 3% 3% 5%;
+    border-radius: 5px;
+}
+
+footer form button {
+    margin: auto !important ;
+    width: 60%;
+    padding: 3%;
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c6a289;
+    border-radius: 7px;
+    cursor: pointer;
+    justify-self: center;
+}
+
+footer form button:hover {
+    background-color: #fa6e02;
+}
