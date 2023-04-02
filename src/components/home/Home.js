@@ -4,7 +4,7 @@ import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
 function Home(prop){
     return (
-        <div class="container">
+        <div className="container">
         <Header />
         <Tours data={prop.data} />
         <Footer />
