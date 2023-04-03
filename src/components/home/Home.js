@@ -6,7 +6,13 @@ function Home(prop){
     return (
         <div className="container">
         <Header />
-        <Tours data={prop.data} />
+        <main>
+          {
+            prop.data.map((element)=>
+              <Tours name={element.name} image={element.image} info={element.info} price={element.price} />
+            )
+          }
+        </main>
         <Footer />
         </div>
       );
