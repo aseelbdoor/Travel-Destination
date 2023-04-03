@@ -4,9 +4,15 @@ import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
 function Home(prop){
     return (
-        <div class="container">
+        <div className="container">
         <Header />
-        <Tours data={prop.data} />
+        <main>
+          {
+            prop.data.map((element)=>
+              <Tours name={element.name} image={element.image} info={element.info} price={element.price} />
+            )
+          }
+        </main>
         <Footer />
         </div>
       );
