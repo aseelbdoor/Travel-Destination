@@ -2,6 +2,7 @@ import './Home.css';
 import Header from '../header/Header';
 import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
+
 function Home(prop){
     return (
         <div className="container">
@@ -9,7 +10,7 @@ function Home(prop){
         <main>
           {
             prop.data.map((element)=>
-              <Tours name={element.name} image={element.image} info={element.info} price={element.price} />
+              <Tours id={element.id} name={element.name} image={element.image} info={element.info} price={element.price} />
             )
           }
         </main>
