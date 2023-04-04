@@ -1,15 +1,16 @@
 import './Tours.css';
+import { Link } from "react-router-dom";
 
 function Tours(prop) {
   return (
     <div className="top">
       <div className="title"><h1>{prop.name}</h1></div>
       <div className="card">
-        <div className="photo"><img src={prop.image} alt={prop.name} /></div>
-        <div className="content">
+        <div className="photo"><Link to={`/city/${prop.id}`}><img src={prop.image} alt={prop.name} /></Link></div>
+        {/* <div className="content">
           <p>{prop.info}</p>
           <p>Trip price : {prop.price}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

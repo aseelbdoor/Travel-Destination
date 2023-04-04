@@ -1,12 +1,20 @@
+// @ts-nocheck
 import './rest.css';
 import './App.css';
 import Home from './components/home/Home';
-// @ts-ignore
-let destination =require('./data/db.json');
+import { Routes, Route } from "react-router-dom";
+import TourDetails from './components/TourDetails/TourDetails';
+let destination = require('./data/db.json');
 function App() {
   return (
     <>
-    <Home data ={destination}/>
+      <Routes>
+          <Route path="/" element={<Home data={destination} />} />
+          <Route path="/about" element={<Home data={destination} />} />
+          <Route path="/contact" element={<Home data={destination} />} />
+          <Route path="/login" element={<Home data={destination} />} />
+          <Route path="/city/:id" element={<TourDetails />} />
+      </Routes>
     </>
   );
 }

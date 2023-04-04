@@ -1,17 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './Header.css';
+import Navbar from '../Navbar/Navbar';
 
 function Header() {
     return (
         <header>
-            <nav id="nav1">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About As</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Log In</a></li>
-                </ul>
-            </nav>
+            <section>
+                <h1>Travel Destenation</h1>
+            </section>
+            <Navbar/>
         </header>
     );
 }
