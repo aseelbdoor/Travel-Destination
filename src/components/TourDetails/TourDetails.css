@@ -1,39 +1,91 @@
-.details::before{
-    content: '';
+.details{
     height: 100%;
 	width: 100%;
     top: 0;
     bottom: 0;
-    z-index: -1;
     position: fixed;
-	background-image: linear-gradient( 115deg, rgba(18, 18, 124, 0.8), rgba(206, 186, 136, 0.7) );
 	background-position: center;
 	background-size:cover;
     background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+    ;
+    gap: 0;
 }
-
 .details nav{
-    margin: 3% auto;
+    position: sticky;
+    grid-area: header;
+    opacity: unset;
+    margin: 1% auto;
 }
 
 .details nav ul li a{
-    color: rgb(236, 195, 97);
+    color: #fff;
     text-shadow: 0 0 4px #000;
 }
 .destination{
-    display: flex;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
+    grid-area: main;
+    width: 50%;
+    margin: 3% auto;
     border-radius: 20px;
-    min-height: 450px;
-    margin: 6% auto;
-    opacity: 0.5;
-    background: #f0e4ff55;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 3% 3%;
+    grid-template: auto;
+    background: #d4cedcae;
+}
+.destination h1{
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 0 0 4px #000;
 }
 .details .destination .info{
-    width: 90%;
-    opacity: 1;
+    width:95%;
+    height: 100%;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.details .destination .info p{
+    font-size: 25px;
+    text-align: left;
+    text-shadow: 0 0 5px #b598d1;
+    font-style: oblique;
+}
+.details .destination .info p button{
+    margin-left: 3%;
+    padding: 0.9% 3% 0.9% 3%;
     color: #fff;
     font-weight: bold;
+    font-style: oblique;
+    border-radius: 5px;
+    border: none;
+    font-kerning: none;
+    background-image: linear-gradient(10deg,#995aff,#1f074c);
+    margin-top: 2%;
+    cursor: pointer;
+}
+.details .destination .info p button:hover{
+    background-image: linear-gradient(20deg,#742ce8,#d2bffa);
+    text-shadow: 1px 1px 7px #2e2248;
+}
+
+.details .destination .info .price{
+    color: #340c79;
+    text-shadow: 0px 0px 10px #a997cf;
+    text-align: center;
+    margin-top: 5%;
+}
+
+@media only screen and (max-width: 644px){
+    .details #nav2{
+        margin-left: 46%;
+        margin-top:9%
+    }
 }
