@@ -7,13 +7,7 @@ function Home(prop){
     return (
         <div className="container">
         <Header />
-        <main>
-          {
-            prop.data.map((element)=>
-              <Tours id={element.id} name={element.name} image={element.image} info={element.info} price={element.price} />
-            )
-          }
-        </main>
+        <Tours data={prop.data} />
         <Footer />
         </div>
       );

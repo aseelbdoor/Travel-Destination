@@ -1,18 +1,18 @@
 import './Tours.css';
-import { Link } from "react-router-dom";
+import Tour from './tour/Tour';
 
 function Tours(prop) {
   return (
-    <div className="top">
-      <div className="title"><h1>{prop.name}</h1></div>
-      <div className="card">
-        <div className="photo"><Link to={`/city/${prop.id}`}><img src={prop.image} alt={prop.name} /></Link></div>
-        {/* <div className="content">
-          <p>{prop.info}</p>
-          <p>Trip price : {prop.price}</p>
-        </div> */}
-      </div>
-    </div>
+    <main>
+      {
+        prop.data.map((element)=>{
+          return(
+            <Tour id={element.id} name={element.name} image={element.image} />
+          );
+        })
+      }
+    </main>
+    
   );
 }
 
